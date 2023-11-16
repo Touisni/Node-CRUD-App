@@ -1,5 +1,5 @@
 {
-  "name": "TouisniILMSI",
+  "name": "touisnicrudapp",
   "version": "1.0.0",
   "description": "User Database Manager ",
   "main": "server.js",
