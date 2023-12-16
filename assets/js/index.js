@@ -23,18 +23,18 @@ $("#update_user").submit(function(event){
     });
 });
 
-if (window.location.pathname === "/") { // Corrected the equality check
+if (window.location.pathname === "/") {
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
-        var id = $(this).attr("data-id"); // Corrected attribute name
+        var id = $(this).attr("data-id");
         var request = {
-            url: `http://localhost:3000/api/users/${id}`, // Used the correct variable 'id'
+            url: `http://localhost:3000/api/users/${id}`,
             method: "DELETE",
         };
         if(confirm("Are you sure?")){
             $.ajax(request).done(function(response){
                 alert("Data Deleted");
-                location.reload(); // Corrected the function call
+                location.reload();
             });
         }
     });
